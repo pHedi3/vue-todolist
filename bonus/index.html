@@ -23,8 +23,10 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 forum">
-                    <input v-model="newTask" placeholder="scrivi la task" @keyup.enter="goTo" type="text">
-                    <input v-model="newTaskType" placeholder="mayby, must, should" @keyup.enter="push" type="text">
+                    <input id="form-1" v-model="newTask" placeholder="scrivi la task" @keyup.enter="goToNext"
+                        type="text">
+                    <input id="form-2" v-model="newTaskType" placeholder="mayby, must, should" @keyup.enter="push"
+                        type="text">
                     <button @click="push">Aggiungi</button>
                 </div>
             </div>

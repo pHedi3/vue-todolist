@@ -8,7 +8,11 @@ new Vue({
         ],
         typeTask: ['mayby', 'must', 'should'],
         newTask: '',
-        newTaskType: ''
+        newTaskType: '',
+        formCunter: 0
+    },
+    mounted() {
+        this.goToNext()
     },
     methods: {
         push: function () {
@@ -26,6 +30,11 @@ new Vue({
         },
         remove: function (index) {
             this.toDoList.splice(index, 1)
+        },
+        goToNext: function () {
+            this.formCunter++
+            const focusElement = document.getElementById('form-' + this.formCunter)
+            focusElement.focus()
         }
     }
 })
