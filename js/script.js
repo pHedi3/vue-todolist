@@ -3,7 +3,8 @@ new Vue({
     data: {
         toDoList: [
             'Mangiare',
-            'Prendere la panna'
+            'Prendere la panna',
+            'Fare la doccia'
         ],
         newTask: ''
     },
@@ -13,7 +14,7 @@ new Vue({
             this.newTask = '';
         },
         remove: function (index) {
-            this.toDoList.sl
+            this.toDoList.splice(index, 1)
         }
     }
 })
