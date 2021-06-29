@@ -23,29 +23,25 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 forum">
-                    <div class="row">
-                        <div class="col-9 ">
-                            <input v-model="newTask" placeholder="scrivi la task" @keyup.enter="push" type="text">
-                        </div>
-                        <div class="col-3">
-                            <button @click="push">Aggiungi</button>
-                        </div>
-                    </div>
-                </div>
+                    <input v-model="newTask" placeholder="scrivi la task" @keyup.enter="push" type="text">
 
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 list">
-                    <ul>
-                        <li v-for="task in toDoList ">
-                            <span>{{task}}</span>
-                            <i class="fas fa-times-circle" @click="remove"></i>
-                        </li>
-                    </ul>
+                    <button @click="push">Aggiungi</button>
                 </div>
-
             </div>
+
         </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 list">
+                <ul>
+                    <li v-for="">
+                        <span>{{task}}</span>
+                        <i class="fas fa-times-circle" @click="remove"></i>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 
     </div>
 
