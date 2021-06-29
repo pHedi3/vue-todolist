@@ -2,19 +2,32 @@ new Vue({
     el: '#app',
     data: {
         toDoList: [
-            'Mangiare',
-            'Prendere la panna',
-            'Fare la doccia'
+            { nameTask: 'Mangiare', taskType: 'must' },
+            { nameTask: 'Prendere la panna', taskType: 'mayby' },
+            { nameTask: 'Fare la doccia', taskType: 'should' }
         ],
-        newTask: ''
+        typeTask: ['mayby', 'must', 'should'],
+        newTask: '',
+        newTaskType: ''
     },
     methods: {
         push: function () {
-            this.toDoList.push(this.newTask);
+            if (this.newTask == '' || !this.typeTask.includes(this.newTaskType)) {
+                alert('inserisci meglio i dati')
+            } else {
+                this.toDoList.push({
+                    nameTask: this.newTask,
+                    taskType: this.newTaskType
+                });
+            }
             this.newTask = '';
+            this.newTaskType = ''
+
         },
         remove: function (index) {
             this.toDoList.splice(index, 1)
         }
     }
 })
+
+alert

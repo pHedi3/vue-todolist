@@ -41,14 +41,61 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    border-bottom: 1px solid #ddd;
+    margin: 12px 0;
+    padding: 0 24px;
+    border-radius: 24px;
+    color: white;
+}
+
+.list li span {
+    display: flex;
+    align-items: center;
 }
 
 .list li:first-child {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .list li:last-child {
-    margin-bottom: 20px;
-    border-bottom: none;
+    margin-bottom: 12px;
+}
+
+.must {
+    background-color: tomato;
+}
+
+.must span::after {
+    font-size: 12px;
+    margin-left: 24px;
+    padding: 0 12px;
+    content: 'must';
+    color: tomato;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.mayby {
+    background-color: rgb(134, 62, 134);
+}
+.mayby span::after {
+    font-size: 12px;
+    margin-left: 24px;
+    padding: 0 12px;
+    content: 'mayby';
+    color: rgb(134, 62, 134);
+    background-color: white;
+    border-radius: 12px;
+}
+
+.should {
+    background-color: teal;
+}
+.should span::after {
+    font-size: 12px;
+    margin-left: 24px;
+    padding: 0 12px;
+    content: 'should';
+    color: teal;
+    background-color: white;
+    border-radius: 12px;
 }
